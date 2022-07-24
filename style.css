@@ -32,6 +32,15 @@ h6 {
   font-family: 'Karla', sans-serif;
   color: var(--title_color);
   font-weight: bold;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--title_color),
+    0 0 82px var(--title_color),
+    0 0 92px var(--title_color),
+    0 0 102px var(--title_color),
+    0 0 151px var(--title_color);
 }
 
 h1 {
@@ -377,7 +386,7 @@ h3 {
   font-size: 12px;
 }
 
-.preview__btn {
+.btn {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -391,7 +400,7 @@ h3 {
   letter-spacing: 4px
 }
 
-.preview__btn:hover {
+.btn:hover {
   background: var(--hover_color);
   color: #fff;
   border-radius: 5px;
@@ -401,12 +410,12 @@ h3 {
     0 0 100px var(--hover_color);
 }
 
-.preview__btn span {
+.btn span {
   position: absolute;
   display: block;
 }
 
-.preview__btn span:nth-child(1) {
+.btn span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -426,7 +435,7 @@ h3 {
   }
 }
 
-.preview__btn span:nth-child(2) {
+.btn span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -447,7 +456,7 @@ h3 {
   }
 }
 
-.preview__btn span:nth-child(3) {
+.btn span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -468,7 +477,7 @@ h3 {
   }
 }
 
-.preview__btn span:nth-child(4) {
+.btn span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -518,7 +527,7 @@ h3 {
     width: 90%;
   }
 
-  .preview__btn {
+  .btn {
     margin-top: 10px;
   }
 }
@@ -617,6 +626,14 @@ h3 {
 
 
 @media screen and (max-width: 500px) {
+  .about {
+    margin-top: 20px;
+  }
+
+  .about__content {
+    margin-top: 20px;
+  }
+
   .about__title {
     font-size: 1.2em;
   }
@@ -630,3 +647,299 @@ h3 {
     font-size: 0.6em;
   }
 }
+
+/*courses styles*/
+
+.courses {
+  margin-top: 40px;
+}
+
+.courses__title {
+  text-align: center;
+}
+
+.courses__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0px;
+}
+
+.courses__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 44%;
+  -moz-box-shadow: 0px 0px 14px var(--hover_color);
+  -webkit-box-shadow: 0px 0px 14px var(--hover_color);
+  box-shadow: 0px 0px 14px var(--hover_color);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card__title {
+  text-align: center;
+}
+
+.card__description {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.card__price {
+  text-align: center;
+  font-size: 45px;
+  line-height: 52px;
+  font-weight: bold;
+  color: var(--title_color);
+  margin-bottom: 20px;
+}
+
+.card__btn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .courses__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .courses__card {
+    width: 80%;
+  }
+
+  .courses__card:first-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .courses {
+    margin-top: 20px;
+  }
+
+  .courses__title {
+    font-size: 1.2em;
+  }
+
+  .card__title {
+    font-size: 0.8em;
+  }
+
+  .card__description {
+    font-size: 0.6em;
+    margin: 20px auto;
+  }
+
+  .card__price {
+    margin-bottom: 0;
+  }
+
+  .card__btn {
+    margin-bottom: 10px;
+  }
+}
+
+/*docs styles*/
+
+.docs {
+  margin-top: 40px;
+}
+
+.docs__title {
+  text-align: center;
+}
+
+.docs__subtitle {
+  margin: 40px 0 0 40px;
+}
+
+.docs__content {
+  margin-top: 40px;
+}
+
+.docs__item {
+  display: flex;
+  margin: 0 0 40px 80px;
+  position: relative;
+  min-height: 70px;
+}
+
+.docs__text {
+  position: relative;
+  flex: 1 0 auto;
+  width: 60%;
+  padding: 0 0 0 10px;
+  border-bottom: 1px solid var(--hover_color);
+  border-left: 1px solid var(--hover_color);
+}
+
+.docs__text.center {
+  padding: 15px 0 0 10px;
+}
+
+.docs__text::before {
+  content: '';
+  position: absolute;
+  left: -50px;
+  background-color: var(--hover_color);
+  border-radius: 50%;
+  top: 20%;
+  width: 40px;
+  height: 40px;
+  box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--hover_color),
+    0 0 82px var(--hover_color),
+    0 0 92px var(--hover_color),
+    0 0 102px var(--hover_color),
+    0 0 151px var(--hover_color);
+}
+
+.docs__void {
+  width: 30%;
+}
+
+@media screen and (max-width: 992px) {
+
+  .docs__text {
+    width: 81%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .docs__text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .docs {
+    margin-top: 20px;
+  }
+
+  .docs__title {
+    font-size: 1.2em;
+  }
+
+  .docs__subtitle {
+    font-size: 0.8em;
+    margin: 20px 0 0 20px;
+  }
+
+  .docs__content {
+    margin-top: 20px;
+  }
+
+  .docs__item {
+    min-height: 50px;
+    margin: 0 0 20px 40px;
+  }
+
+  .docs__text {
+    font-size: 0.6em;
+    line-height: 1.4em;
+  }
+
+  .docs__text::before {
+    left: -35px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/*kod styles*/
+
+.kod {
+  margin-top: 40px;
+}
+
+.kod__title {
+  text-align: center;
+}
+
+.kod__content {
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.kod__item {
+  -moz-box-shadow: 0px 0px 14px var(--add_color);
+  -webkit-box-shadow: 0px 0px 14px var(--add_color);
+  box-shadow: 0px 0px 14px var(--add_color);
+  padding: 15px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: var(--add_color);
+  text-align: center;
+}
+
+.kod__img {
+  width: 120px;
+  height: 120px;
+  margin: 40px 0;
+  box-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px var(--hover_color),
+    0 0 82px var(--hover_color),
+    0 0 92px var(--hover_color);
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .kod__item {
+    width: 45%;
+  }
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .kod {
+    margin-top: 20px;
+  }
+
+  .kod__title {
+    font-size: 1.2em;
+  }
+
+  .kod__content {
+    margin: 20px 0;
+    justify-content: center;
+  }
+
+  .kod__item {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .kod__img {
+    width: 60px;
+    height: 60px;
+    margin: 20px 0;
+    box-shadow: 0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 42px var(--hover_color),
+      0 0 82px var(--hover_color),
+      0 0 92px var(--hover_color);
+  }
+
+  .kod__text {
+    font-size: 0.8em;
+  }
+}
+
+/*qustions styles*/
+
+
+
+/*footer styles*/

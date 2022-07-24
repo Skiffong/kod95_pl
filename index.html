@@ -85,8 +85,8 @@
           <nav class="_left">
             <ul class="header__list">
               <li><a class="header__link" href="#about">О нас</a></li>
-              <li><a class="header__link" href="#">Курсы</a></li>
-              <li><a class="header__link" href="#">Документы</a></li>
+              <li><a class="header__link" href="#courses">Курсы</a></li>
+              <li><a class="header__link" href="#docs">Документы</a></li>
             </ul>
           </nav>
           <div class="logo">
@@ -94,9 +94,9 @@
           </div>
           <nav class="_right">
             <ul class="header__list">
-              <li><a class="header__link" href="#">Код 95</a></li>
-              <li><a class="header__link" href="#">Вопросы</a></li>
-              <li><a class="header__link" href="#">Контакты</a></li>
+              <li><a class="header__link" href="#kod">Код 95</a></li>
+              <li><a class="header__link" href="#questions">Вопросы</a></li>
+              <li><a class="header__link" href="#contacts">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -109,6 +109,7 @@
         </div>
       </div>
     </header>
+
     <main class="main">
       <section class="preview" id="form">
         <div class="preview__bg">
@@ -141,7 +142,7 @@
             <div class="preview__right">
               <form action="#" class="preview__form">
                 <div class="user-box">
-                  <input type="text" name="" required="" />
+                  <input type="text" name="" required="" target />
                   <label>Ваше Имя</label>
                 </div>
                 <div class="user-box">
@@ -193,26 +194,141 @@
         </div>
       </section>
 
-      <section class="courses">
+      <section class="courses" id="courses">
         <div class="container">
-          <h2 class="courses__title"></h2>
+          <h2 class="courses__title">Наши курсы</h2>
           <div class="courses__wrapper">
             <div class="courses__card">
               <h3 class="card__title">Длинный курс</h3>
-              <p class="card__description">Длится 3 недели, 2 недели теория (вторник и четверг с 9:00 до 17:00). 3 неделя практика. Мед. справки включены в стоимость</p>
+              <p class="card__description">
+                Длится 3 недели, 2 недели теория (вторник и четверг с 9:00 до
+                17:00). 3 неделя практика. Мед. справки включены в стоимость
+              </p>
               <p class="card__price">2400 зл</p>
-              <button class="card__btn">Записаться</button>
+              <a href="#form" class="card__btn btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Записаться
+              </a>
             </div>
             <div class="courses__card">
               <h3 class="card__title">Короткий курс</h3>
-              <p class="card__description">Длится 6 дней, при наличии АДР срок обучения 3 дня (вторник и четверг с 9:00 до 17:00). Мед. справки включены в стоимость. Экзамена по окончанию курса нету.</p>
+              <p class="card__description">
+                Длится 6 дней, при наличии АДР срок обучения 3 дня (вторник и
+                четверг с 9:00 до 17:00). Мед. справки включены в стоимость.
+                Экзамена по окончанию курса нету.
+              </p>
               <p class="card__price">800 зл</p>
-              <button class="card__btn">Записаться</button>
+              <a href="#form" class="card__btn btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Записаться
+              </a>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="docs" id="docs">
+        <div class="container">
+          <h2 class="docs__title">Замена бумажного кода на пластик</h2>
+          <h3 class="docs__subtitle">Список необходимых документов:</h3>
+          <div class="docs__content">
+            <div class="docs__item">
+              <p class="docs__text center">
+                Паспорт (Ксерокопия 32-33 страницы паспорта)
+              </p>
+              <p class="docs__void"></p>
+            </div>
+            <div class="docs__item">
+              <p class="docs__void"></p>
+              <p class="docs__text">
+                Водительское удостоверение (Ксерокопия с двух сторон)
+              </p>
+            </div>
+            <div class="docs__item">
+              <p class="docs__text center">Песель (копия песеля)</p>
+              <p class="docs__void"></p>
+            </div>
+            <div class="docs__item">
+              <p class="docs__void"></p>
+              <p class="docs__text">
+                Фотография (фото 3,5х4,5 на белом фоне, как на визу)
+              </p>
+            </div>
+            <div class="docs__item">
+              <p class="docs__text">
+                95 Код (Ваш бумажный 95 код, который был получен ранее или его
+                ксерокопия)
+              </p>
+              <p class="docs__void"></p>
+            </div>
+            <div class="docs__item">
+              <p class="docs__void"></p>
+              <p class="docs__text">
+                Медицинские справки (Ксерокопия справок прохождения медкомиссии
+                и психотеста)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="kod" id="kod">
+        <div class="container">
+          <h2 class="kod__title">
+            Твой путь с нами после подачи заявки на Код 95
+          </h2>
+          <div class="kod__content">
+            <div class="kod__item">
+              <img class="kod__img" src="img/icons/cod_1.svg" alt="" />
+              <p class="kod__text">
+                Мы высылаем вам приглашение для оформления визы.
+              </p>
+            </div>
+            <div class="kod__item">
+              <img class="kod__img" src="img/icons/cod_2.svg" alt="" />
+              <p class="kod__text">
+                Вы приезжаете в Польшу, где мы вас встречаем.
+              </p>
+            </div>
+            <div class="kod__item">
+              <img class="kod__img" src="img/icons/cod_3.svg" alt="" />
+              <p class="kod__text">
+                Мы отвозим вас на прохождения Психолога и Медкомиссии.
+              </p>
+            </div>
+            <div class="kod__item">
+              <img class="kod__img" src="img/icons/cod_4.svg" alt="" />
+              <p class="kod__text">
+                Мы везем заселяться в жилье высокого стандарта на время курса.
+              </p>
+            </div>
+            <div class="kod__item">
+              <img class="kod__img" src="img/icons/cod_5.svg" alt="" />
+              <p class="kod__text">
+                Посещаете лекции, решаете задачи онлайн, проходите практические
+                занятия.
+              </p>
+            </div>
+            <div class="kod__item">
+              <img class="kod__img" src="img/icons/cod_6.svg" alt="" />
+              <p class="kod__text">
+                Сдаете государственный экзамен и получаете официальный
+                сертификат для работы международным водителем.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions" id="questions"></section>
     </main>
-    <footer class="footer"></footer>
+
+    <footer class="footer" id="contacts"></footer>
   </body>
 </html>

@@ -166,7 +166,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  //
+  //slider
+  const prev = document.querySelector(".slide__prev"),
+    next = document.querySelector(".slide__next"),
+    slides = document.querySelectorAll(".slide"),
+    dots = document.querySelectorAll(".dot");
+
+  let index = 0;
+
+  const activeSlide = (n) => {
+    for (let slide of slides) {
+      slide.classList.remove("active");
+    }
+    slides[n].classList.add("active");
+  };
+
+  const activeDot = (n) => {
+    for (let dot of dots) {
+      dot.classList.remove("active");
+    }
+    dots[n].classList.add("active");
+  };
+
+  const currentSlide = (i) => {
+    activeSlide(i);
+    activeDot(i);
+  };
+
+  const nextSlide = () => {
+    if (index == slides.length - 1) {
+      index = 0;
+      currentSlide(index);
+    } else {
+      index++;
+      currentSlide(index);
+    }
+  };
+
+  const prevSlide = () => {
+    if (index == 0) {
+      index = slides.length - 1;
+      currentSlide(index);
+    } else {
+      index--;
+      currentSlide(index);
+    }
+  };
+
+  dots.forEach((el, indexDot) => {
+    el.addEventListener("click", () => {
+      index = indexDot;
+      currentSlide(index);
+    });
+  });
+
+  //setInterval(nextSlide, 2500);
+
+  next.addEventListener("click", nextSlide);
+  prev.addEventListener("click", prevSlide);
 
   // send request
   const form = document.querySelector(".preview__form");

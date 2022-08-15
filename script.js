@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let formData = new FormData(form);
     formData.append("project_name", window.location.href);
-    formData.append("admin_email", "myavtoskola@gmail.com");
+    formData.append("admin_email", "test@test.com");
     formData.append("form_subject", "Форма записи на курсы код 95");
 
     fetch("https://avtoskola.by/mail/mail.php", {
